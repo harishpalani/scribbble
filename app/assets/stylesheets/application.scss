@@ -36,6 +36,7 @@ html, body {
   text-align: center;
   border-radius: 6px;
   background-color: #f8f8f8;
+
   &.dragging::before {
     content: "";
     position: absolute;
@@ -49,6 +50,7 @@ html, body {
     pointer-events: none;
     z-index: 99;
   }
+  
   &.fire::before {
     content: "";
     position: absolute;

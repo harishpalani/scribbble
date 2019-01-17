@@ -4,7 +4,7 @@
     <div class="column is-half">
 
       <% unless @shot.user_shot.blank? %>
-        <%= image_tag (@shot.user_shot_url), id: previewImage %>
+        <%= image_tag (@shot.user_shot_url), id: "previewImage" %>
       <% end %>
 
       <output id="list"></output>
