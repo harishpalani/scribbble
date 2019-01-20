@@ -4,4 +4,5 @@ class Shot < ApplicationRecord
 
     mount_uploader :user_shot, UserShotUploader
     is_impressionable
+    acts_as_voter
 end
