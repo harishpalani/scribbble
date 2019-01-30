@@ -5,8 +5,6 @@ ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
-# Use sqlite3 as the database for Active Record
-gem 'pg' # Install command: gem install sqlite3 --platform=ruby
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -48,6 +46,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3' # Install command: gem install sqlite3 --platform=ruby
 end
 
 group :development do
@@ -61,6 +61,11 @@ group :development do
   gem 'better_errors'
   gem 'guard'
   gem 'guard-livereload', require: false
+end
+
+group :production do
+  # sqlite3 gem replacement for Heroku deployment purposes
+  gem 'pg'
 end
 
 group :test do
